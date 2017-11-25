@@ -1,0 +1,88 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Trainings - {{ block.super }}
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+        {% if trainings %}            
+            {% for training in trainings %}
+                <div>
+                <div class="row" style="background: #007676; color: #ffffff; border-radius: 2px">
+                    <div class="col-md-10">
+                        <h4>{{ training.date }}</h4>
+                    </div>
+                    <div class="col-md-2">
+                        <small class="text-muted">id: {{ training.id }}</small>
+                    </div>
+                </div>
+                <br> 
+                <div class="row">
+                    <div class="col-md-4">
+                        <p style="color: #777">
+                            <strong style="color: #007676">Duration: </strong>
+                            {{ training.time }} minutes</p></div>
+                    <div class="col-md-8">
+                        <p style="color: #777">
+                            <strong style="color: #007676">Location: </strong>
+                            {{ training.location }}
+                        </p>
+                    </div>
+                </div>
+                <br> 
+                <div class="row">
+                    <div class="col-md-6">
+                        <p style="color: #777">
+                            <strong style="color: #007676">Description: </strong>
+                            {{ training.description }}
+                        </p>
+                    </div>
+                    <div class="col-md-6">
+                        <p style="color: #777">
+                            <strong style="color: #007676">Comment: </strong>
+                            {{ training.comment }}
+                        </p>
+                    </div>                              
+                </div>
+                <br> 
+                <p style="color: #007676"><strong>Training Breakdown</strong></p>
+                <br>           
+                {% for activity in activities %}
+                    {% if training.date == activity.training_date_id %}          
+                        <div class="row" style="margin-left: 0.5em">
+                            <div class="col-md-3">
+                                <p style="color: #777">
+                                    <strong style="color: #007676">Time: </strong>
+                                    {{ activity.time }} minutes
+                                </p>
+                            </div>
+                            <div class="col-md-3">
+                                <p style="color: #777">
+                                    <strong style="color: #007676">Intensity: </strong>
+                                    {{ activity.intensity_type }}
+                                </p>
+                            </div>       
+                            <div class="col-md-3">
+                                <p style="color: #777">
+                                    <strong style="color: #007676">Type: </strong>
+                                    {{ activity.method_type }}
+                                </p>
+                            </div>                            
+                        </div>
+                        <br> 
+                        <!--
+                        <div class="row" style="margin-left: 0.5em">
+                            <div class="col-md-12">
+                                Comment: elfhds;fpsifpidsjpoifjdsifjidsjfoidsfjdsof                    
+                            </div>
+                        </div>
+                        -->
+                    {% endif %}
+                {% endfor %}       
+            {% endfor %}
+        {% else %}
+            <h3>You don't have any trainings yet :(</h3>
+        {% endif %}
+    </div>
+{% endblock %}
