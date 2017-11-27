@@ -19,14 +19,20 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.11/howto/deployment/checklist/
 
-# SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'd)dbfw0%1(c$@)2g++9d4pc^q7f)$wdr6!s*h&f12^o^sa(x!('
+from decouple import config, Csv
+import dj_database_url
 
-# SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+SECRET_KEY = config('SECRET_KEY')
 
-ALLOWED_HOSTS = ['localhost', '127.0.0.1']
+DEBUG = config('DEBUG', default=False, cast=bool)
 
+ALLOWED_HOSTS = config('ALLOWED_HOSTS', cast=Csv())
+
+DATABASES = {
+    'default': dj_database_url.config(
+        default=config('DATABASE_URL')
+    )
+}
 
 # Application definition
 
