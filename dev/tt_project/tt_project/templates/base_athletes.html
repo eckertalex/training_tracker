@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block stylesheet %}
+  <link rel="stylesheet" href="{% static 'css/athletes.css' %}">
+{% endblock %}
+
+{% block body %}
+  <div class="container">
+    <h1 class="text-center logo my-4">
+      <a style="padding: 0.5rem; color: #007676; background: #ffffff; border-radius: 3px;" href="{% url 'home' %}">Training Tracker</a>
+    </h1>
+    {% block content %}
+    {% endblock %}
+  </div>
+{% endblock %}

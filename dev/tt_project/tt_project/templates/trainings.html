@@ -1,28 +1,37 @@
 {% extends 'base.html' %}
 
+{% load gravatar %}
+
 {% block title %}
 Trainings - {{ block.super }}
 {% endblock %}
 
 {% block content %}
-    <div class="container">
+<div class="container">
+    {% if user.is_authenticated %}
+        <div>
+            <img style="margin: auto; display: block; height: 128px; width: 128px !important; border-radius: 50% !important" src="{{ user|gravatar }}" alt="{{ username }}" class="w-100 rounded">
+        </div>
+        <h4 style="text-align: center; color: #007676">{{ user.first_name}} {{ user.last_name}}</h4>
+        <br>
+        <div class="mb-4">
+            <a href="{% url 'new_training' %}" class="btn btn-lex">New Training</a>
+        </div>         
         {% if trainings %}            
-            {% for training in trainings %}
-                <div>
-                <div class="row" style="background: #007676; color: #ffffff; border-radius: 2px">
-                    <div class="col-md-10">
-                        <h4>{{ training.date }}</h4>
-                    </div>
-                    <div class="col-md-2">
-                        <small class="text-muted">id: {{ training.id }}</small>
-                    </div>
-                </div>
-                <br> 
+        {% for training in trainings %}
+            {% if training.athlete == user %}
+                <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title" style="padding: 10px; background: #007676; color: #ffffff; border-radius: 2px">
+                        {{ training.date }}
+                    </h4>
                 <div class="row">
                     <div class="col-md-4">
                         <p style="color: #777">
                             <strong style="color: #007676">Duration: </strong>
-                            {{ training.time }} minutes</p></div>
+                            {{ training.time }} minutes
+                        </p>
+                    </div>
                     <div class="col-md-8">
                         <p style="color: #777">
                             <strong style="color: #007676">Location: </strong>
@@ -45,7 +54,12 @@ Trainings - {{ block.super }}
                         </p>
                     </div>                              
                 </div>
-                <br> 
+                <div class="mt-3">
+                    <a href="{% url 'edit_training' training.pk %}"
+                        class="btn btn-lex btn-sm"
+                        role="button">Edit</a>
+                </div>
+                <br>
                 <p style="color: #007676"><strong>Training Breakdown</strong></p>
                 <br>           
                 {% for activity in activities %}
@@ -79,10 +93,15 @@ Trainings - {{ block.super }}
                         </div>
                         -->
                     {% endif %}
-                {% endfor %}       
-            {% endfor %}
+                {% endfor %}
+                </div>
+                </div>
+                <br> 
+            {% endif %}       
+        {% endfor %}
         {% else %}
-            <h3>You don't have any trainings yet :(</h3>
-        {% endif %}
-    </div>
+            <h3>You don't have any trainings yet :(</h3>                   
+        {% endif %}        
+    {% endif %}
+</div>
 {% endblock %}
