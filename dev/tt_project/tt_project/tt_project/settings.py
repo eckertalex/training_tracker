@@ -29,9 +29,14 @@ DEBUG = config('DEBUG', default=False, cast=bool)
 ALLOWED_HOSTS = config('ALLOWED_HOSTS', cast=Csv())
 
 DATABASES = {
-    'default': dj_database_url.config(
-        default=config('DATABASE_URL')
-    )
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': config('DB_NAME'),
+        'USER': config('DB_USER'),
+        'PASSWORD': config('DB_PASSWORD'),
+        'HOST': config('DB_HOST'),
+        'PORT': '',
+    }
 }
 
 # Application definition
@@ -81,25 +86,6 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'tt_project.wsgi.application'
-
-
-# Database
-# https://docs.djangoproject.com/en/1.11/ref/settings/#databases
-
-DATABASES = {
-    'default': {
-        'CONN_MAX_AGE': 0,
-        'ENGINE': 'django.db.backends.mysql',
-        'HOST': 'localhost',
-        'NAME': 'training_tracker',
-        'PASSWORD': 'skiing',
-        'PORT': '',
-        'USER': 'ttadmin',
-        'TEST': {
-            'NAME': 'test_training_tracker',
-        },
-    }
-}
 
 
 # Password validation
