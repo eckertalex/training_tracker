@@ -142,6 +142,6 @@ EMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD', default='')
 EMAIL_USE_TLS = config('EMAIL_USE_TLS', default=True, cast=bool)
 
 DEFAULT_FROM_EMAIL = 'Training Tracker <noreply@trainingtracker.com>'
-EMAIL_SUBJECT_PREFIX = '[Training Tracker]
+EMAIL_SUBJECT_PREFIX = '[Training Tracker] '
 
 LOGIN_URL = 'login'
