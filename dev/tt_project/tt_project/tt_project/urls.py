@@ -52,7 +52,7 @@ urlpatterns = [
     url(r'^settings/account/$', athletes_views.UserUpdateView.as_view(), name='my_account'),
     url(r'^trainings/$', views.trainings, name='trainings'),
     url(r'^trainings/new/$', views.new_training, name='new_training'),
-    url(r'^trainings/activity/new', views.NewActivityView.as_view(), name='new_activity'),
+    url(r'^trainings/activity/new', views.new_activity, name='new_activity'),
     url(r'^trainings/(?P<training_pk>\d+)/edit/$',
         views.TrainingUpdateView.as_view(), name='edit_training'),
     url(r'^admin/', admin.site.urls),

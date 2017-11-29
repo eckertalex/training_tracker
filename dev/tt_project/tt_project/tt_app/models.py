@@ -81,7 +81,7 @@ class Training(models.Model):
     athlete = models.ForeignKey(User)
     
     def __str__(self):
-        return self.date.strftime('%A %Y-%m-%d %H:%M')
+        return self.date.strftime('%A %d %b %Y %I:%M%p')
 
 class Activity(models.Model):
     time = models.IntegerField(null=False)

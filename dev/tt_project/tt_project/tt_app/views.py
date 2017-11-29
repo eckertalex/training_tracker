@@ -43,15 +43,15 @@ class TrainingUpdateView(UpdateView):
         tr.save()
         return redirect('trainings')
 
-@method_decorator(login_required, name='dispatch')
-class NewActivityView(CreateView):
-    model = Activity
-    fields = ('training_date', 'time', 'sport_type', 'method_type', 'intensity_type',)
-    template_name = 'new_activity.html'
-    context_object_name = 'activity'
-
-    def form_valid(self, form):
-        ac = form.save(commit=False)
-        ac.training_athlete = self.request.user
-        ac.save()
-        return redirect('trainings')
+@login_required
+def new_activity(request, training=None):
+    if request.method == 'POST':
+        form = NewActivityForm(user=request.user, data=request.POST)
+        if form.is_valid():
+            ac = form.save(commit=False)
+            ac.training_athlete = request.user
+            ac.save()
+            return redirect('trainings')
+    else:
+        form = NewActivityForm(user=request.user)
+    return render(request, 'new_activity.html', {'form': form})
