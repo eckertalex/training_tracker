@@ -7,7 +7,7 @@ from django.views.generic import UpdateView, CreateView
 from django.utils import timezone
 from django.utils.decorators import method_decorator
 
-from .forms import NewTrainingForm
+from .forms import *
 from .models import *
 
 # Create your views here.
@@ -19,8 +19,6 @@ def trainings(request):
 
 @login_required
 def new_training(request):
-    training = Training.objects.all()
-    user = User.objects.first()
     if request.method == 'POST':
         form = NewTrainingForm(request.POST)
         if form.is_valid():
@@ -50,7 +48,6 @@ class NewActivityView(CreateView):
     model = Activity
     fields = ('training_date', 'time', 'sport_type', 'method_type', 'intensity_type',)
     template_name = 'new_activity.html'
-    pk_url_kwarg = 'training_pk'
     context_object_name = 'activity'
 
     def form_valid(self, form):

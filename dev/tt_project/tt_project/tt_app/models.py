@@ -79,7 +79,7 @@ class Training(models.Model):
     comment = models.CharField(max_length=255)
     description = models.CharField(max_length=255)
     athlete = models.ForeignKey(User)
-
+    
     def __str__(self):
         return self.date.strftime('%A %Y-%m-%d %H:%M')
 
