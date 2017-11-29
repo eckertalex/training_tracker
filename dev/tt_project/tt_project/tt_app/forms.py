@@ -1,6 +1,6 @@
 from django import forms
 from django.utils.timezone import now
-from .models import Training, Activity, Sport, Intensity, Method
+from .models import *
 
 class NewTrainingForm(forms.ModelForm):
         date = forms.DateTimeField(initial=now, help_text="When did you train?", required=True)
@@ -16,3 +16,14 @@ class NewTrainingForm(forms.ModelForm):
         class Meta:
             model = Training
             fields = ['date', 'time', 'location', 'comment', 'description']
+
+class NewActivityForm(forms.ModelForm):
+        date = forms.ModelChoiceField(queryset = Training.objects.all())
+        time = forms.IntegerField(required=True, help_text="How long did you train in minutes?")
+        sport_type = forms.ModelChoiceField(queryset = Sport.objects.all())
+        method_type = forms.ModelChoiceField(queryset = Method.objects.all())
+        intensity_type = forms.ModelChoiceField(queryset = Intensity.objects.all())
+
+        class Meta:
+            model = Activity
+            fields = ['date', 'time', 'sport_type', 'method_type', 'intensity_type', ]

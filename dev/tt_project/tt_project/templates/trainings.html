@@ -17,6 +17,7 @@ Trainings - {{ block.super }}
         <br>
         <div class="mb-4">
             <a href="{% url 'new_training' %}" class="btn btn-lex">New Training</a>
+            <a href="{% url 'new_activity' %}" class="btn btn-lex" role="button">Add Activity</a>
         </div>         
         {% if trainings %}            
         {% for training in trainings %}
@@ -27,7 +28,7 @@ Trainings - {{ block.super }}
                         <div class="row" style="padding: 10px; background: #007676; color: #ffffff; border-radius: 2px">
                             <div class="col-md-10">                    
                             <h4 class="card-title">
-                                {{ training.date }}
+                                {{ training }}
                             </h4>
                             </div>
                             <div class="col-md-2">
@@ -39,13 +40,13 @@ Trainings - {{ block.super }}
                         </div>
                     </div>
                 <div class="row">
-                    <div class="col-md-4">
+                    <div class="col-md-6">
                         <p style="color: #777">
                             <strong style="color: #007676">Duration: </strong>
                             {{ training.time }} minutes
                         </p>
                     </div>
-                    <div class="col-md-8">
+                    <div class="col-md-6">
                         <p style="color: #777">
                             <strong style="color: #007676">Location: </strong>
                             {{ training.location }}
@@ -67,14 +68,8 @@ Trainings - {{ block.super }}
                         </p>
                     </div>                              
                 </div>
-                <br>
-                <p style="color: #007676"><strong>Training Breakdown</strong></p>
-                <br>
-              
-                <a href="#"
-                    class="btn btn-lex btn-sm"
-                    role="button">Add Activity
-                </a>      
+                <hr>
+                <p style="color: #007676"><strong>Training Breakdown:</strong></p>     
                 {% for activity in activities %}
                     {% if training.date == activity.training_date_id %}          
                         <div class="row" style="margin-left: 0.5em">
@@ -97,9 +92,8 @@ Trainings - {{ block.super }}
                                 </p>
                             </div>                            
                         </div>
-                        <br> 
                     {% endif %}
-                {% endfor %}
+                {% endfor %} 
                 </div>
                 </div>
                 <br> 
