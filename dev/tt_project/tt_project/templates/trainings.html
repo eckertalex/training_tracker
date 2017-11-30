@@ -79,25 +79,36 @@ Trainings - {{ block.super }}
                 {% for activity in activities %}
                     {% if training.date == activity.training_date_id %}          
                         <div class="row" style="margin-left: 0.5em">
-                            <div class="col-md-3">
+                            <div class="col-md-4">
                                 <p style="color: #777">
                                     <strong style="color: #007676">Time: </strong>
                                     {{ activity.time }} minutes
                                 </p>
                             </div>
-                            <div class="col-md-3">
+                            <div class="col-md-2">
+                                    <p style="color: #777">
+                                        <strong style="color: #007676">Sport: </strong>
+                                        {{ activity.sport_type }}
+                                    </p>
+                                </div>
+                            <div class="col-md-2">
                                 <p style="color: #777">
                                     <strong style="color: #007676">Intensity: </strong>
                                     {{ activity.intensity_type }}
                                 </p>
                             </div>       
-                            <div class="col-md-3">
+                            <div class="col-md-2">
                                 <p style="color: #777">
                                     <strong style="color: #007676">Type: </strong>
                                     {{ activity.method_type }}
                                 </p>
                             </div>
-                            <div class="col-md-3" style="text-align: right;">
+                            <div class="col-md-2" style="text-align: right;">
+                                <a href="{% url 'edit_activity' activity.pk %}"
+                                    class="btn btn-secondary btn-sm"
+                                    role="button">
+                                    <i class="fa fa-pencil"></i>
+                                </a>
                                 <a href="{% url 'delete_activity' activity.pk %}"
                                     class="btn btn-danger btn-sm"
                                     role="button">

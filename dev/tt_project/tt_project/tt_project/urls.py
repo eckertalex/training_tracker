@@ -55,6 +55,8 @@ urlpatterns = [
     url(r'^trainings/activities/new', views.new_activity, name='new_activity'),
     url(r'^trainings/(?P<training_pk>\d+)/edit/$',
         views.TrainingUpdateView.as_view(), name='edit_training'),
+    url(r'^trainings/activity/(?P<activity_pk>\d+)/edit/$',
+        views.ActivityUpdateView.as_view(), name='edit_activity'),
     url(r'^trainings/(?P<training_pk>\d+)/delete/$', views.delete_training, name="delete_training"),
         url(r'^trainings/activities(?P<activity_pk>\d+)/delete/$', views.delete_activity, name="delete_activity"),
     url(r'^admin/', admin.site.urls),
