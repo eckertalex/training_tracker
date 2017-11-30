@@ -31,11 +31,17 @@ Trainings - {{ block.super }}
                                 {{ training }}
                             </h4>
                             </div>
-                            <div class="col-md-2">
-                            <a href="{% url 'edit_training' training.pk %}"
-                                class="btn btn-secondary btn-sm"
-                                role="button">Edit
-                            </a>
+                            <div class="col-md-2" style="text-align: right;">
+                                <a href="{% url 'edit_training' training.pk %}"
+                                    class="btn btn-secondary btn-sm"
+                                    role="button">
+                                    <i class="fa fa-pencil"></i>
+                                </a>
+                                <a href="{% url 'delete_training' training.pk %}"
+                                    class="btn btn-danger btn-sm"
+                                    role="button">
+                                    <i class="fa fa-trash-o"></i>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -90,17 +96,22 @@ Trainings - {{ block.super }}
                                     <strong style="color: #007676">Type: </strong>
                                     {{ activity.method_type }}
                                 </p>
-                            </div>                            
+                            </div>
+                            <div class="col-md-3" style="text-align: right;">
+                                <a href="{% url 'delete_activity' activity.pk %}"
+                                    class="btn btn-danger btn-sm"
+                                    role="button">
+                                    <i class="fa fa-trash-o"></i>
+                                </a>
+                            </div>                           
                         </div>
                     {% endif %}
                 {% endfor %} 
                 </div>
                 </div>
-                <br> 
+                <br>
             {% endif %}       
-        {% endfor %}
-        {% else %}
-            <h3>You don't have any trainings yet :(</h3>                   
+        {% endfor %}             
         {% endif %}        
     {% endif %}
 </div>

@@ -30,6 +30,18 @@ def new_training(request):
         form = NewTrainingForm()
     return render(request, 'new_training.html', {'form': form})
 
+@login_required
+def delete_training(request, training_pk=None):
+    tr = get_object_or_404(Training, pk=training_pk)
+    tr.delete()
+    return redirect('trainings')
+
+@login_required
+def delete_activity(request, activity_pk=None):
+    ac = get_object_or_404(Activity, pk=activity_pk)
+    ac.delete()
+    return redirect('trainings')
+
 @method_decorator(login_required, name='dispatch')
 class TrainingUpdateView(UpdateView):
     model = Training
