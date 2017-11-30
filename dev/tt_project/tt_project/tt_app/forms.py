@@ -26,7 +26,6 @@ class NewActivityForm(forms.ModelForm):
         def __init__(self, *args, **kwargs):
             user = kwargs.pop('user')
             super(NewActivityForm, self).__init__(*args, **kwargs)
-            print(self.fields)
             self.fields['training_date'].queryset = Training.objects.filter(athlete=user)
 
         class Meta:

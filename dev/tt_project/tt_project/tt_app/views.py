@@ -30,6 +30,18 @@ def new_training(request):
         form = NewTrainingForm()
     return render(request, 'new_training.html', {'form': form})
 
+@login_required
+def delete_training(request, training_pk=None):
+    tr = get_object_or_404(Training, pk=training_pk)
+    tr.delete()
+    return redirect('trainings')
+
+@login_required
+def delete_activity(request, activity_pk=None):
+    ac = get_object_or_404(Activity, pk=activity_pk)
+    ac.delete()
+    return redirect('trainings')
+
 @method_decorator(login_required, name='dispatch')
 class TrainingUpdateView(UpdateView):
     model = Training
@@ -55,3 +67,16 @@ def new_activity(request, training=None):
     else:
         form = NewActivityForm(user=request.user)
     return render(request, 'new_activity.html', {'form': form})
+
+@method_decorator(login_required, name='dispatch')
+class ActivityUpdateView(UpdateView):
+    model = Activity
+    fields = ('training_date', 'time', 'sport_type', 'intensity_type', 'method_type')
+    template_name = 'edit_activity.html'
+    pk_url_kwarg = 'activity_pk'
+    context_object_name = 'activity'
+
+    def form_valid(self, form):
+        ac = form.save(commit=False)
+        ac.save()
+        return redirect('trainings')
