@@ -82,6 +82,9 @@ class Training(models.Model):
     
     def __str__(self):
         return self.date.strftime('%A %d %b %Y %H:%M')
+    
+    def athlete_str(self):
+        return self.athlete
 
 class Activity(models.Model):
     time = models.IntegerField(null=False)
@@ -90,3 +93,12 @@ class Activity(models.Model):
     intensity_type = models.ForeignKey(Intensity)
     training_date = models.ForeignKey(Training, to_field='date')
     training_athlete = models.ForeignKey(User)
+
+    def __str__(self):
+        return self.training_date
+
+    def __sport__(self):
+        return self.sport_type
+
+    def __athlete__(self):
+        return self.training_athlete

@@ -29,7 +29,6 @@ urlpatterns = [
     url(r'^signup/$', athletes_views.signup, name='signup'),
     url(r'^login/$', auth_views.LoginView.as_view(template_name='login.html'), name='login'),
     url(r'^logout/$', auth_views.LogoutView.as_view(), name='logout'),
-    
     url(r'^reset/$',
         auth_views.PasswordResetView.as_view(
             template_name='password_reset.html',
@@ -58,6 +57,6 @@ urlpatterns = [
     url(r'^trainings/activity/(?P<activity_pk>\d+)/edit/$',
         views.ActivityUpdateView.as_view(), name='edit_activity'),
     url(r'^trainings/(?P<training_pk>\d+)/delete/$', views.delete_training, name="delete_training"),
-        url(r'^trainings/activities(?P<activity_pk>\d+)/delete/$', views.delete_activity, name="delete_activity"),
+    url(r'^trainings/activities(?P<activity_pk>\d+)/delete/$', views.delete_activity, name="delete_activity"),
     url(r'^admin/', admin.site.urls),
 ]

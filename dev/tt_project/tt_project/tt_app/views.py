@@ -13,7 +13,7 @@ from .models import *
 # Create your views here.
 @login_required
 def trainings(request):
-    trainings = Training.objects.all()
+    trainings = Training.objects.all().order_by('-date')
     activities = Activity.objects.all()
     return render(request, 'trainings.html', {'trainings': trainings, 'activities': activities,})
 
