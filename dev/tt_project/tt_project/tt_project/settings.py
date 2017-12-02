@@ -50,6 +50,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     'widget_tweaks',
+    'bootstrap3_datetime',
 
     'athletes',
     'tt_app',

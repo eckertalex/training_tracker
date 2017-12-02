@@ -1,9 +1,10 @@
 from django import forms
 from django.utils.timezone import now
+from bootstrap3_datetime.widgets import DateTimePicker
 from .models import *
 
 class NewTrainingForm(forms.ModelForm):
-    date = forms.DateTimeField(initial=now, help_text="When did you train?")
+    date = forms.DateTimeField(widget=DateTimePicker(options={"format": "YYYY-MM-DD HH:mm"}), initial=now, help_text="When did you train?")
     location = forms.CharField(required=False, max_length=45, help_text="Where did you train?")
     comment = forms.CharField(required=False, widget=forms.Textarea(
         attrs={'rows': 5, 'placeholder': 'Type any comments in here..'}), 

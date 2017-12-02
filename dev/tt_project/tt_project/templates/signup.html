@@ -3,21 +3,19 @@
 {% block title %}Sign up to Training Tracker{% endblock %}
 
 {% block content %}
-  <div class="row justify-content-center">
-    <div class="col-lg-8 col-md-10 col-sm-12">
-      <div class="card">
-        <div class="card-body">
-          <h3 class="card-title">Sign up</h3>
-          <form method="post" novalidate>
-            {% csrf_token %}
-            {% include 'includes/form.html' %}
-            <button type="submit" class="btn btn-lex btn-block">Create an account</button>
-          </form>
-        </div>
-        <div class="card-footer text-muted text-center">
-          Already have an account? <a href="{% url 'login' %}">Log in</a>
-        </div>
-      </div>
+  <section class="panel panel-primary">
+    <header class="panel-heading">
+      <h3 class="panel-header">Sign up</h3>
+    </header>
+    <div class="panel-body">
+      <form method="post" novalidate>
+        {% csrf_token %}
+        {% include 'includes/form.html' %}
+        <button type="submit" class="btn btn-lex btn-block">Create an account</button>
+      </form>
     </div>
-  </div>
+    <div class="panel-footer text-muted text-center">
+      Already have an account? <a href="{% url 'login' %}">Log in</a>        
+    </div>
+  </section>
 {% endblock %}

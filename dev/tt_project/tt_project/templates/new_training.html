@@ -5,11 +5,11 @@
 {% block title %}Start a New Training{% endblock %}
 
 {% block content %}
-<h4 style="color: #007676">New Training</h4>
+<h3 style="color: #007676">New Training</h3>
 <form method="post" novalidate>
   {% csrf_token %}
   {% include 'includes/form.html' %}
   <button type="submit" class="btn btn-lex">Save</button>
-  <a href="{% url 'trainings' %}" class="btn btn-outline-secondary" role="button">Cancel</a>
+  <a href="{% url 'trainings' %}" class="btn btn-default" role="button">Cancel</a>
 </form>
 {% endblock %}
