@@ -73,8 +73,7 @@ class Intensity(models.Model):
 
 # Create your models here.
 class Training(models.Model):
-    date = models.DateTimeField(null=False, unique=True)
-    time = models.IntegerField(null=False)
+    date = models.DateTimeField(null=False)
     location = models.CharField(max_length=45)
     comment = models.CharField(max_length=255)
     description = models.CharField(max_length=255)
@@ -91,11 +90,11 @@ class Activity(models.Model):
     sport_type = models.ForeignKey(Sport)
     method_type = models.ForeignKey(Method)
     intensity_type = models.ForeignKey(Intensity)
-    training_date = models.ForeignKey(Training, to_field='date')
+    training_id = models.ForeignKey(Training)
     training_athlete = models.ForeignKey(User)
 
     def __str__(self):
-        return self.training_date
+        return self.training_id
 
     def __sport__(self):
         return self.sport_type
