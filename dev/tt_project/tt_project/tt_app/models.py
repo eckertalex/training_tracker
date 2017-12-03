@@ -8,22 +8,22 @@ from django.contrib.auth.models import User
 
 # Create your models here.
 SPORT_TYPE_CHOICES = (
-    ('STRENGTH', 'Strength'),
-    ('SNOW_SKATE', 'Snow Ski Skate'),
-    ('SNOW_CLASSIC', 'Snow Ski Classic'),
-    ('ROLL_SKATE', 'Roller Ski Skate'),
-    ('ROLL_CLASSIC', 'Roller Ski Classic'),
-    ('RUN', 'Run'),
-    ('HIKE', 'Hike'),
-    ('BOUNDING', 'Bounding'),
-    ('SPECIFIC_STRENGTH', 'Specific Strength'),
+    ('Strength', 'Strength'),
+    ('Snow Si Skate', 'Snow Ski Skate'),
+    ('Snow Ski Classic', 'Snow Ski Classic'),
+    ('Roller Ski Skate', 'Roller Ski Skate'),
+    ('Roller Ski Classic', 'Roller Ski Classic'),
+    ('Run', 'Run'),
+    ('Hike', 'Hike'),
+    ('Bounding', 'Bounding'),
+    ('Specific Strength', 'Specific Strength'),
 )
 
 class Sport(models.Model):
     type = models.CharField(
         max_length=45,
         choices=SPORT_TYPE_CHOICES,
-        default='RUN',
+        default='Run',
         primary_key=True
     )
 
@@ -31,21 +31,22 @@ class Sport(models.Model):
         return self.type
 
 METHOD_TYPE_CHOICES = (
-    ('DISTANCE', 'Distance'),
-    ('INTERVAL', 'Interval'),
-    ('WARM_UP', 'Warm Up'),
-    ('COOL_DOWN', 'Cool Down'),
+    ('Distance', 'Distance'),
+    ('Interval', 'Interval'),
+    ('Warm up', 'Warm Up'),
+    ('Cool Down', 'Cool Down'),
     ('OD', 'OD'),
-    ('SPEED', 'Speed'),
-    ('TIME_TRIAL', 'Time Trial'),
-    ('RACE', 'Race'),
+    ('Speed', 'Speed'),
+    ('Time Trial', 'Time Trial'),
+    ('Race', 'Race'),
+    ('Strength', 'Strength'),
 )
 
 class Method(models.Model):
     type = models.CharField(
         max_length=45,
         choices=METHOD_TYPE_CHOICES,
-        default='DISTANCE',
+        default='Distance',
         primary_key=True
     )
 
@@ -57,7 +58,7 @@ INTENSITY_TYPE_CHOICES = (
     ('L2', 'L2'),
     ('L3', 'L3'),
     ('L4', 'L4'),
-    ('RACE', 'RACE'),
+    ('Race', 'Race'),
 )
 
 class Intensity(models.Model):
