@@ -9,7 +9,7 @@ from django.contrib.auth.models import User
 # Create your models here.
 SPORT_TYPE_CHOICES = (
     ('Strength', 'Strength'),
-    ('Snow Si Skate', 'Snow Ski Skate'),
+    ('Snow Ski Skate', 'Snow Ski Skate'),
     ('Snow Ski Classic', 'Snow Ski Classic'),
     ('Roller Ski Skate', 'Roller Ski Skate'),
     ('Roller Ski Classic', 'Roller Ski Classic'),
