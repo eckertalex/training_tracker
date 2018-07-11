@@ -22,11 +22,11 @@
     <nav class="navbar navbar-default navbar-static-top">
         <div class="container-fluid">
             <div class="navbar-header">
-                <a class="navbar-brand" href="{% url 'home/' %}">Training Tracker</a>
+                <a class="navbar-brand" href="{% url 'home' %}">Training Tracker</a>
             </div>
             {% if user.is_authenticated %}
             <ul class="nav navbar-nav">
-                <li><a href="{% url 'trainings/' %}">Trainings</a></li>
+                <li><a href="{% url 'trainings' %}">Trainings</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <li class="dropdown">
@@ -34,10 +34,10 @@
                         <div class="btn-group">
                             <a class="btn btn-lex dropdown-toggle" data-toggle="dropdown" href="#"><i class="fa fa-user" aria-hidden="true"></i> {{ user.username }}</a>
                             <ul class="dropdown-menu">
-                                <li><a style="color: #474747 !important" class="dropdown-item" href="{% url 'my_account/' %}">My account</a></li>
-                                <li><a style="color: #474747 !important" class="dropdown-item" href="{% url 'password_change/' %}">Change password</a></li>
+                                <li><a style="color: #474747 !important" class="dropdown-item" href="{% url 'my_account' %}">My account</a></li>
+                                <li><a style="color: #474747 !important" class="dropdown-item" href="{% url 'password_change' %}">Change password</a></li>
                                 <li role="separator" class="divider"></li>
-                                <li><a style="color: #474747 !important" class="dropdown-item" href="{% url 'logout/' %}">Log out</a></li>
+                                <li><a style="color: #474747 !important" class="dropdown-item" href="{% url 'logout' %}">Log out</a></li>
                             </ul>
                         </div>
                     </div>
@@ -45,8 +45,8 @@
             </ul>
             {% else %}
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="{% url 'signup/' %}"><i class="fa fa-user" aria-hidden="true"></i> Sign Up</a></li>
-                <li><a href="{% url 'login/' %}"><i class="fa fa-sign-in" aria-hidden="true"></i> Login</a></li>
+                <li><a href="{% url 'signup' %}"><i class="fa fa-user" aria-hidden="true"></i> Sign Up</a></li>
+                <li><a href="{% url 'login' %}"><i class="fa fa-sign-in" aria-hidden="true"></i> Login</a></li>
             </ul>
             {% endif %}
         </div>
