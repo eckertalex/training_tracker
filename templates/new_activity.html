@@ -1,15 +1,8 @@
-{% extends 'base.html' %}
-
-{% load widget_tweaks %}
-
-{% block title %}Add a New Activity{% endblock %}
-
-{% block content %}
+{% extends 'base.html' %} {% load widget_tweaks %} {% block title %}Add a New Activity{% endblock %} {% block content %}
 <h4 style="color: #007676">New Activity</h4>
 <form method="post" novalidate>
-  {% csrf_token %}
-  {% include 'includes/form.html' %}
-  <button type="submit" class="btn btn-lex">Save</button>
-  <a href="{% url 'trainings' %}" class="btn btn-default" role="button">Cancel</a>
+    {% csrf_token %} {% include 'includes/form.html' %}
+    <button type="submit" class="btn btn-lex">Save</button>
+    <a href="{% url 'trainings/' %}" class="btn btn-default" role="button">Cancel</a>
 </form>
 {% endblock %}

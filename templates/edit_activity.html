@@ -1,17 +1,10 @@
-{% extends 'base.html' %}
-
-{% block title %}Edit Activity{% endblock %}
-
-{% block content %}
-  {% if activity.training_athlete == request.user %}
-  <h4 style="color: #007676">Edit Activity</h4>  
-  <form method="post" class="mb-4" novalidate>
-    {% csrf_token %}
-    {% include 'includes/form.html' %}
+{% extends 'base.html' %} {% block title %}Edit Activity{% endblock %} {% block content %} {% if activity.training_athlete == request.user %}
+<h4 style="color: #007676">Edit Activity</h4>
+<form method="post" class="mb-4" novalidate>
+    {% csrf_token %} {% include 'includes/form.html' %}
     <button type="submit" class="btn btn-lex">Save changes</button>
-    <a href="{% url 'trainings' %}" class="btn btn-default" role="button">Cancel</a>
-  </form>
-  {% else %}
-    <h4>Sorry, this is not your training.</h4>
-  {% endif %}
-{% endblock %}
+    <a href="{% url 'trainings/' %}" class="btn btn-default" role="button">Cancel</a>
+</form>
+{% else %}
+<h4>Sorry, this is not your training.</h4>
+{% endif %} {% endblock %}
