@@ -1,60 +1,61 @@
-{% load static %}<!DOCTYPE html>
+{% load static %}
+<!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <meta charset="utf-8">
     <title>{% block title %}Training Tracker{% endblock %}</title>
     <script src="{% static 'js/jquery-3.2.1.min.js' %}"></script>
     <script src="{% static 'js/popper.min.js' %}"></script>
     <script src="{% static 'js/moment.min.js' %}"></script>
-    <script src="{% static 'bootstrap-3.3.7-dist/js/bootstrap.min.js' %}"></script>    
+    <script src="{% static 'bootstrap-3.3.7-dist/js/bootstrap.min.js' %}"></script>
     <script src="{% static 'js/bootstrap-datetimepicker.min.js' %}"></script>
     <link rel="stylesheet" href="{% static 'bootstrap-3.3.7-dist/css/bootstrap.min.css' %}">
     <link rel="stylesheet" href="{% static 'css/bootstrap-datetimepicker.min.css' %}">
     <link rel="stylesheet" href="{% static 'font-awesome-4.7.0/css/font-awesome.min.css' %}">
     <link rel="stylesheet" href="{% static 'css/app.css' %}">
-    <link rel="shortcut icon" type="image/svg+xml" href="{% static favicon.ico %}"/>    
-    {% block stylesheet %}{% endblock %}
+    <link rel="shortcut icon" type="image/svg+xml" href="{% static favicon.svg %}" /> {% block stylesheet %}{% endblock %}
 </head>
-  <body>
-    {% block body %}   
+
+<body>
+    {% block body %}
     <nav class="navbar navbar-default navbar-static-top">
         <div class="container-fluid">
-          <div class="navbar-header">
-            <a class="navbar-brand" href="{% url 'home' %}">Training Tracker</a>
-          </div>
-          {% if user.is_authenticated %}          
+            <div class="navbar-header">
+                <a class="navbar-brand" href="{% url 'home' %}">Training Tracker</a>
+            </div>
+            {% if user.is_authenticated %}
             <ul class="nav navbar-nav">
-              <li><a href="{% url 'trainings' %}">Trainings</a></li>              
+                <li><a href="{% url 'trainings' %}">Trainings</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
-              <li class="dropdown">
-                <div class="navbar-form">
-                  <div class="btn-group">
-                    <a class="btn btn-lex dropdown-toggle" data-toggle="dropdown" href="#"><i class="fa fa-user" aria-hidden="true"></i> {{ user.username }}</a>
-                      <ul class="dropdown-menu">
-                        <li><a style="color: #474747 !important" class="dropdown-item" href="{% url 'my_account' %}">My account</a></li>
-                        <li><a style="color: #474747 !important" class="dropdown-item" href="{% url 'password_change' %}">Change password</a></li>
-                        <li role="separator" class="divider"></li>
-                        <li><a style="color: #474747 !important" class="dropdown-item" href="{% url 'logout' %}">Log out</a></li>
-                      </ul>
-                  </div>
-                </div>
-              </li>
+                <li class="dropdown">
+                    <div class="navbar-form">
+                        <div class="btn-group">
+                            <a class="btn btn-lex dropdown-toggle" data-toggle="dropdown" href="#"><i class="fa fa-user" aria-hidden="true"></i> {{ user.username }}</a>
+                            <ul class="dropdown-menu">
+                                <li><a style="color: #474747 !important" class="dropdown-item" href="{% url 'my_account' %}">My account</a></li>
+                                <li><a style="color: #474747 !important" class="dropdown-item" href="{% url 'password_change' %}">Change password</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a style="color: #474747 !important" class="dropdown-item" href="{% url 'logout' %}">Log out</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
             </ul>
-          {% else %}
-          <ul class="nav navbar-nav navbar-right">
-            <li><a href="{% url 'signup' %}"><i class="fa fa-user" aria-hidden="true"></i> Sign Up</a></li>
-            <li><a href="{% url 'login' %}"><i class="fa fa-sign-in" aria-hidden="true"></i> Login</a></li>
-          </ul>
-          {% endif %}
+            {% else %}
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="{% url 'signup' %}"><i class="fa fa-user" aria-hidden="true"></i> Sign Up</a></li>
+                <li><a href="{% url 'login' %}"><i class="fa fa-sign-in" aria-hidden="true"></i> Login</a></li>
+            </ul>
+            {% endif %}
         </div>
-      </nav>
+    </nav>
     <br>
     <div class="container">
-      {% block content %}
-      {% endblock %}
+        {% block content %} {% endblock %}
     </div>
-    <br>
-    {% endblock body %}
-  </body>
+    <br> {% endblock body %}
+</body>
+
 </html>
