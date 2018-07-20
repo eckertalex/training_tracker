@@ -1,0 +1,148 @@
+[12/Jul/2018 12:49:05] WARNING [django.request:152] Not Found: /robots.txt
+[12/Jul/2018 12:49:05] WARNING [django.server:124] "GET /robots.txt HTTP/1.1" 404 84
+[12/Jul/2018 12:49:05] DEBUG [django.template:925] Exception while resolving variable 'favicon' in template 'index.html'.
+Traceback (most recent call last):
+  File "/home/lex/dev/venv/local/lib/python2.7/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [favicon] in u"[{'False': False, 'None': None, 'True': True}, {u'csrf_token': <SimpleLazyObject: <function _get_val at 0x7f646918f848>>, 'user': <SimpleLazyObject: <function <lambda> at 0x7f646a1c8230>>, 'perms': <django.contrib.auth.context_processors.PermWrapper object at 0x7f64691932d0>, 'DEFAULT_MESSAGE_LEVELS': {'DEBUG': 10, 'INFO': 20, 'WARNING': 30, 'SUCCESS': 25, 'ERROR': 40}, 'messages': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x7f646a238910>, u'request': <WSGIRequest: GET '/'>}, {}, {u'view': <django.views.generic.base.TemplateView object at 0x7f646a1e0810>}]"
+[12/Jul/2018 12:49:05] INFO [django.server:124] "GET / HTTP/1.1" 200 1512
+[12/Jul/2018 12:49:05] WARNING [django.request:152] Not Found: /static/js/popper.min.js.map
+[12/Jul/2018 12:49:05] WARNING [django.server:124] "GET /static/js/popper.min.js.map HTTP/1.1" 404 101
+[12/Jul/2018 12:49:06] DEBUG [django.template:925] Exception while resolving variable 'favicon' in template 'index.html'.
+Traceback (most recent call last):
+  File "/home/lex/dev/venv/local/lib/python2.7/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [favicon] in u"[{'False': False, 'None': None, 'True': True}, {u'csrf_token': <SimpleLazyObject: <function _get_val at 0x7f6469161488>>, 'user': <SimpleLazyObject: <function <lambda> at 0x7f6469161410>>, 'perms': <django.contrib.auth.context_processors.PermWrapper object at 0x7f646915db50>, 'DEFAULT_MESSAGE_LEVELS': {'DEBUG': 10, 'INFO': 20, 'WARNING': 30, 'SUCCESS': 25, 'ERROR': 40}, 'messages': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x7f646915d790>, u'request': <WSGIRequest: GET '/'>}, {}, {u'view': <django.views.generic.base.TemplateView object at 0x7f646915d890>}]"
+[12/Jul/2018 12:49:06] INFO [django.server:124] "GET / HTTP/1.1" 200 1512
+[12/Jul/2018 12:49:07] WARNING [django.request:152] Not Found: /static/js/popper.min.js.map
+[12/Jul/2018 12:49:07] WARNING [django.server:124] "GET /static/js/popper.min.js.map HTTP/1.1" 404 101
+[12/Jul/2018 12:49:07] DEBUG [django.template:925] Exception while resolving variable 'favicon' in template 'signup.html'.
+Traceback (most recent call last):
+  File "/home/lex/dev/venv/local/lib/python2.7/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [favicon] in u"[{'False': False, 'None': None, 'True': True}, {u'csrf_token': <SimpleLazyObject: <function _get_val at 0x7f64691612a8>>, 'user': <SimpleLazyObject: <function <lambda> at 0x7f6469161488>>, 'perms': <django.contrib.auth.context_processors.PermWrapper object at 0x7f646916b750>, 'DEFAULT_MESSAGE_LEVELS': {'DEBUG': 10, 'INFO': 20, 'WARNING': 30, 'SUCCESS': 25, 'ERROR': 40}, 'messages': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x7f646915d410>, u'request': <WSGIRequest: GET '/signup/'>}, {}, {u'form': <SignUpForm bound=False, valid=Unknown, fields=(username;first_name;last_name;email;password1;password2)>}]"
+[12/Jul/2018 12:49:07] INFO [django.server:124] "GET /signup/ HTTP/1.1" 200 3489
+[12/Jul/2018 12:49:08] WARNING [django.request:152] Not Found: /static/js/popper.min.js.map
+[12/Jul/2018 12:49:08] WARNING [django.server:124] "GET /static/js/popper.min.js.map HTTP/1.1" 404 101
+[12/Jul/2018 12:49:08] DEBUG [django.template:925] Exception while resolving variable 'favicon' in template 'index.html'.
+Traceback (most recent call last):
+  File "/home/lex/dev/venv/local/lib/python2.7/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [favicon] in u"[{'False': False, 'None': None, 'True': True}, {u'csrf_token': <SimpleLazyObject: <function _get_val at 0x7f646912b410>>, 'user': <SimpleLazyObject: <function <lambda> at 0x7f64691612a8>>, 'perms': <django.contrib.auth.context_processors.PermWrapper object at 0x7f64690c32d0>, 'DEFAULT_MESSAGE_LEVELS': {'DEBUG': 10, 'INFO': 20, 'WARNING': 30, 'SUCCESS': 25, 'ERROR': 40}, 'messages': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x7f6469138ed0>, u'request': <WSGIRequest: GET '/'>}, {}, {u'view': <django.views.generic.base.TemplateView object at 0x7f6469138fd0>}]"
+[12/Jul/2018 12:49:08] INFO [django.server:124] "GET / HTTP/1.1" 200 1512
+[12/Jul/2018 12:49:09] WARNING [django.request:152] Not Found: /static/js/popper.min.js.map
+[12/Jul/2018 12:49:09] WARNING [django.server:124] "GET /static/js/popper.min.js.map HTTP/1.1" 404 101
+[12/Jul/2018 18:22:42] DEBUG [django.template:925] Exception while resolving variable 'favicon' in template 'index.html'.
+Traceback (most recent call last):
+  File "/home/lex/dev/venv/local/lib/python2.7/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [favicon] in u"[{'False': False, 'None': None, 'True': True}, {u'csrf_token': <SimpleLazyObject: <function _get_val at 0x7f8c6b194140>>, 'user': <SimpleLazyObject: <function <lambda> at 0x7f8c70011230>>, 'perms': <django.contrib.auth.context_processors.PermWrapper object at 0x7f8c6b192550>, 'DEFAULT_MESSAGE_LEVELS': {'DEBUG': 10, 'INFO': 20, 'WARNING': 30, 'SUCCESS': 25, 'ERROR': 40}, 'messages': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x7f8c700798d0>, u'request': <WSGIRequest: GET '/'>}, {}, {u'view': <django.views.generic.base.TemplateView object at 0x7f8c700277d0>}]"
+[12/Jul/2018 18:22:42] INFO [django.server:124] "GET / HTTP/1.1" 200 2754
+[12/Jul/2018 18:22:42] INFO [django.server:124] "GET /static/css/app.css HTTP/1.1" 304 0
+[12/Jul/2018 18:22:43] WARNING [django.request:152] Not Found: /static/
+[12/Jul/2018 18:22:43] WARNING [django.server:124] "GET /static/ HTTP/1.1" 404 81
+[12/Jul/2018 18:22:46] DEBUG [django.template:925] Exception while resolving variable 'favicon' in template 'login.html'.
+Traceback (most recent call last):
+  File "/home/lex/dev/venv/local/lib/python2.7/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [favicon] in u"[{'False': False, 'None': None, 'True': True}, {u'csrf_token': <SimpleLazyObject: <function _get_val at 0x7f8c6b17b320>>, 'user': <SimpleLazyObject: <function <lambda> at 0x7f8c6b17b140>>, 'perms': <django.contrib.auth.context_processors.PermWrapper object at 0x7f8c6b187290>, 'DEFAULT_MESSAGE_LEVELS': {'DEBUG': 10, 'INFO': 20, 'WARNING': 30, 'SUCCESS': 25, 'ERROR': 40}, 'messages': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x7f8c6b160dd0>, u'request': <WSGIRequest: GET '/login/'>}, {}, {u'view': <django.contrib.auth.views.LoginView object at 0x7f8c6b160ed0>, 'site_name': 'localhost:8000', 'site': <django.contrib.sites.requests.RequestSite object at 0x7f8c6b17d4d0>, 'form': <AuthenticationForm bound=False, valid=Unknown, fields=(username;password)>, 'next': ''}]"
+[12/Jul/2018 18:22:46] INFO [django.server:124] "GET /login/ HTTP/1.1" 200 3485
+[12/Jul/2018 18:22:46] INFO [django.server:124] "GET /static/css/athletes.css HTTP/1.1" 304 0
+[12/Jul/2018 18:22:46] INFO [django.server:124] "GET /static/img/mont_blanc.jpg HTTP/1.1" 304 0
+[12/Jul/2018 18:22:51] DEBUG [django.template:925] Exception while resolving variable 'favicon' in template 'login.html'.
+Traceback (most recent call last):
+  File "/home/lex/dev/venv/local/lib/python2.7/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [favicon] in u"[{'False': False, 'None': None, 'True': True}, {u'csrf_token': <SimpleLazyObject: <function _get_val at 0x7f8c74472a28>>, 'user': <SimpleLazyObject: <function <lambda> at 0x7f8c6b17b410>>, 'perms': <django.contrib.auth.context_processors.PermWrapper object at 0x7f8c6b13e390>, 'DEFAULT_MESSAGE_LEVELS': {'DEBUG': 10, 'INFO': 20, 'WARNING': 30, 'SUCCESS': 25, 'ERROR': 40}, 'messages': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x7f8c6b187990>, u'request': <WSGIRequest: POST '/login/'>}, {}, {u'view': <django.contrib.auth.views.LoginView object at 0x7f8c6b187ad0>, 'site_name': 'localhost:8000', 'site': <django.contrib.sites.requests.RequestSite object at 0x7f8c6b13e0d0>, 'form': <AuthenticationForm bound=True, valid=False, fields=(username;password)>, 'next': ''}]"
+[12/Jul/2018 18:22:51] INFO [django.server:124] "POST /login/ HTTP/1.1" 200 3679
+[12/Jul/2018 18:22:58] INFO [django.server:124] "POST /login/ HTTP/1.1" 302 0
+[12/Jul/2018 18:22:58] DEBUG [django.template:925] Exception while resolving variable 'favicon' in template 'index.html'.
+Traceback (most recent call last):
+  File "/home/lex/dev/venv/local/lib/python2.7/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [favicon] in u"[{'False': False, 'None': None, 'True': True}, {u'csrf_token': <SimpleLazyObject: <function _get_val at 0x7f8c6b123cf8>>, 'user': <SimpleLazyObject: <function <lambda> at 0x7f8c74472a28>>, 'perms': <django.contrib.auth.context_processors.PermWrapper object at 0x7f8c6b17d490>, 'DEFAULT_MESSAGE_LEVELS': {'DEBUG': 10, 'INFO': 20, 'WARNING': 30, 'SUCCESS': 25, 'ERROR': 40}, 'messages': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x7f8c6b187890>, u'request': <WSGIRequest: GET '/'>}, {}, {u'view': <django.views.generic.base.TemplateView object at 0x7f8c6b187b10>}]"
+[12/Jul/2018 18:22:58] INFO [django.server:124] "GET / HTTP/1.1" 200 3618
+[12/Jul/2018 18:23:00] WARNING [django.request:152] Not Found: /robots.txt
+[12/Jul/2018 18:23:00] WARNING [django.server:124] "GET /robots.txt HTTP/1.1" 404 84
+[12/Jul/2018 18:23:00] DEBUG [django.template:925] Exception while resolving variable 'favicon' in template 'trainings.html'.
+Traceback (most recent call last):
+  File "/home/lex/dev/venv/local/lib/python2.7/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: <unprintable VariableDoesNotExist object>
+[12/Jul/2018 18:23:00] DEBUG [django.template:925] Exception while resolving variable 'username' in template 'trainings.html'.
+Traceback (most recent call last):
+  File "/home/lex/dev/venv/local/lib/python2.7/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: <unprintable VariableDoesNotExist object>
+[12/Jul/2018 18:23:00] INFO [django.server:124] "GET /trainings/ HTTP/1.1" 200 7396
+[12/Jul/2018 18:23:04] DEBUG [django.template:925] Exception while resolving variable 'favicon' in template 'new_training.html'.
+Traceback (most recent call last):
+  File "/home/lex/dev/venv/local/lib/python2.7/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [favicon] in u"[{'False': False, 'None': None, 'True': True}, {u'csrf_token': <SimpleLazyObject: <function _get_val at 0x7f8c6b17b140>>, 'user': <SimpleLazyObject: <User: aeckert>>, 'perms': <django.contrib.auth.context_processors.PermWrapper object at 0x7f8c6b107a50>, 'DEFAULT_MESSAGE_LEVELS': {'DEBUG': 10, 'INFO': 20, 'WARNING': 30, 'SUCCESS': 25, 'ERROR': 40}, 'messages': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x7f8c6b0f2ed0>, u'request': <WSGIRequest: GET '/trainings/new/'>}, {}, {u'form': <NewTrainingForm bound=False, valid=Unknown, fields=(date;location;comment;description)>}]"
+[12/Jul/2018 18:23:04] INFO [django.server:124] "GET /trainings/new/ HTTP/1.1" 200 5561
+[12/Jul/2018 18:23:18] DEBUG [django.template:925] Exception while resolving variable 'favicon' in template 'index.html'.
+Traceback (most recent call last):
+  File "/home/lex/dev/venv/local/lib/python2.7/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [favicon] in u"[{'False': False, 'None': None, 'True': True}, {u'csrf_token': <SimpleLazyObject: <function _get_val at 0x7f8c6b17b140>>, 'user': <SimpleLazyObject: <function <lambda> at 0x7f8c70011230>>, 'perms': <django.contrib.auth.context_processors.PermWrapper object at 0x7f8c6a8922d0>, 'DEFAULT_MESSAGE_LEVELS': {'DEBUG': 10, 'INFO': 20, 'WARNING': 30, 'SUCCESS': 25, 'ERROR': 40}, 'messages': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x7f8c6b107c10>, u'request': <WSGIRequest: GET '/'>}, {}, {u'view': <django.views.generic.base.TemplateView object at 0x7f8c70027790>}]"
+[12/Jul/2018 18:23:18] INFO [django.server:124] "GET / HTTP/1.1" 200 3618
+[12/Jul/2018 18:23:26] DEBUG [django.template:925] Exception while resolving variable 'favicon' in template 'trainings.html'.
+Traceback (most recent call last):
+  File "/home/lex/dev/venv/local/lib/python2.7/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: <unprintable VariableDoesNotExist object>
+[12/Jul/2018 18:23:26] DEBUG [django.template:925] Exception while resolving variable 'username' in template 'trainings.html'.
+Traceback (most recent call last):
+  File "/home/lex/dev/venv/local/lib/python2.7/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: <unprintable VariableDoesNotExist object>
+[12/Jul/2018 18:23:26] INFO [django.server:124] "GET /trainings/ HTTP/1.1" 200 7396
+[12/Jul/2018 18:23:28] DEBUG [django.template:925] Exception while resolving variable 'favicon' in template 'new_activity.html'.
+Traceback (most recent call last):
+  File "/home/lex/dev/venv/local/lib/python2.7/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [favicon] in u"[{'False': False, 'None': None, 'True': True}, {u'csrf_token': <SimpleLazyObject: <function _get_val at 0x7f8c6a8a8050>>, 'user': <SimpleLazyObject: <User: aeckert>>, 'perms': <django.contrib.auth.context_processors.PermWrapper object at 0x7f8c6a8a5850>, 'DEFAULT_MESSAGE_LEVELS': {'DEBUG': 10, 'INFO': 20, 'WARNING': 30, 'SUCCESS': 25, 'ERROR': 40}, 'messages': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x7f8c6a8942d0>, u'request': <WSGIRequest: GET '/trainings/activities/new'>}, {}, {u'form': <NewActivityForm bound=False, valid=Unknown, fields=(training_id;time;sport_type;method_type;intensity_type)>}]"
+[12/Jul/2018 18:23:28] INFO [django.server:124] "GET /trainings/activities/new HTTP/1.1" 200 6252
+[12/Jul/2018 18:23:31] DEBUG [django.template:925] Exception while resolving variable 'favicon' in template 'trainings.html'.
+Traceback (most recent call last):
+  File "/home/lex/dev/venv/local/lib/python2.7/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: <unprintable VariableDoesNotExist object>
+[12/Jul/2018 18:23:31] DEBUG [django.template:925] Exception while resolving variable 'username' in template 'trainings.html'.
+Traceback (most recent call last):
+  File "/home/lex/dev/venv/local/lib/python2.7/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: <unprintable VariableDoesNotExist object>
+[12/Jul/2018 18:23:31] INFO [django.server:124] "GET /trainings/ HTTP/1.1" 200 7396
+[12/Jul/2018 18:23:32] DEBUG [django.template:925] Exception while resolving variable 'favicon' in template 'new_training.html'.
+Traceback (most recent call last):
+  File "/home/lex/dev/venv/local/lib/python2.7/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [favicon] in u"[{'False': False, 'None': None, 'True': True}, {u'csrf_token': <SimpleLazyObject: <function _get_val at 0x7f8c6a8a8410>>, 'user': <SimpleLazyObject: <User: aeckert>>, 'perms': <django.contrib.auth.context_processors.PermWrapper object at 0x7f8c6a8b62d0>, 'DEFAULT_MESSAGE_LEVELS': {'DEBUG': 10, 'INFO': 20, 'WARNING': 30, 'SUCCESS': 25, 'ERROR': 40}, 'messages': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x7f8c6a8adc50>, u'request': <WSGIRequest: GET '/trainings/new/'>}, {}, {u'form': <NewTrainingForm bound=False, valid=Unknown, fields=(date;location;comment;description)>}]"
+[12/Jul/2018 18:23:32] INFO [django.server:124] "GET /trainings/new/ HTTP/1.1" 200 5561
+[12/Jul/2018 18:23:42] INFO [django.server:124] "POST /trainings/new/ HTTP/1.1" 302 0
+[12/Jul/2018 18:23:42] DEBUG [django.template:925] Exception while resolving variable 'favicon' in template 'trainings.html'.
+Traceback (most recent call last):
+  File "/home/lex/dev/venv/local/lib/python2.7/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: <unprintable VariableDoesNotExist object>
+[12/Jul/2018 18:23:42] DEBUG [django.template:925] Exception while resolving variable 'username' in template 'trainings.html'.
+Traceback (most recent call last):
+  File "/home/lex/dev/venv/local/lib/python2.7/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: <unprintable VariableDoesNotExist object>
+[12/Jul/2018 18:23:42] INFO [django.server:124] "GET /trainings/ HTTP/1.1" 200 9233
+[12/Jul/2018 18:23:42] INFO [django.server:124] "GET /static/css/app.css HTTP/1.1" 304 0
+[12/Jul/2018 18:23:49] INFO [django.server:124] "GET /trainings/2/delete/ HTTP/1.1" 302 0
+[12/Jul/2018 18:23:49] DEBUG [django.template:925] Exception while resolving variable 'favicon' in template 'trainings.html'.
+Traceback (most recent call last):
+  File "/home/lex/dev/venv/local/lib/python2.7/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: <unprintable VariableDoesNotExist object>
+[12/Jul/2018 18:23:49] DEBUG [django.template:925] Exception while resolving variable 'username' in template 'trainings.html'.
+Traceback (most recent call last):
+  File "/home/lex/dev/venv/local/lib/python2.7/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: <unprintable VariableDoesNotExist object>
+[12/Jul/2018 18:23:49] INFO [django.server:124] "GET /trainings/ HTTP/1.1" 200 7396
