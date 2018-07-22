@@ -37,3 +37,61 @@
     background: #007676;
     border: #000000;
 }
+
+.btn-lex { 
+    color: #fff; 
+    background-color: #007676; 
+    border-color: #000000; 
+  } 
+   
+  .btn-lex:hover, 
+  .btn-lex:focus, 
+  .btn-lex:active, 
+  .btn-lex.active, 
+  .open .dropdown-toggle.btn-lex { 
+    color: #fff; 
+    background-color: #005C5C; 
+    border-color: #000000; 
+  } 
+   
+  .btn-lex:active, 
+  .btn-lex.active, 
+  .open .dropdown-toggle.btn-lex { 
+    background-image: none; 
+  } 
+   
+  .btn-lex.disabled, 
+  .btn-lex[disabled], 
+  fieldset[disabled] .btn-lex, 
+  .btn-lex.disabled:hover, 
+  .btn-lex[disabled]:hover, 
+  fieldset[disabled] .btn-lex:hover, 
+  .btn-lex.disabled:focus, 
+  .btn-lex[disabled]:focus, 
+  fieldset[disabled] .btn-lex:focus, 
+  .btn-lex.disabled:active, 
+  .btn-lex[disabled]:active, 
+  fieldset[disabled] .btn-lex:active, 
+  .btn-lex.disabled.active, 
+  .btn-lex[disabled].active, 
+  fieldset[disabled] .btn-lex.active { 
+    background-color: #007676; 
+    border-color: #000000; 
+  } 
+   
+  .btn-lex .badge { 
+    color: #007676; 
+    background-color: #fff; 
+}
+
+.panel > .panel-heading {
+  background-image: none;
+  background-color: #007676;
+  color: white;
+
+}
+
+.panel {
+    border: 2px solid #007676;
+    border-radius: 10px;
+}
