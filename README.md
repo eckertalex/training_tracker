@@ -13,6 +13,6 @@ Targeted at cross country skiers to log their training, it supports registration
 
 ![Screenshot](images/overview.PNG)
 ![Screenshot](images/newTR.PNG)
-![Screenshot](images/newAc.PNG)
+![Screenshot](images/newAC.PNG)
 ![Screenshot](images/editTR.PNG)
 ![Screenshot](images/editAC.PNG)
